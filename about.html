@@ -1,0 +1,161 @@
+---
+layout: default
+title: The Philosophy of Origin
+permalink: /about/
+description: Meet Sylvan Synergy — a collective of architects, interior designers and landscape thinkers shaping biophilic spaces across Lisbon, Kyoto and Vancouver.
+body_class: about
+---
+
+<header class="page-hero">
+  <div class="container page-hero__grid">
+    <p class="eyebrow page-hero__eyebrow" data-reveal>About the collective</p>
+    <h1 data-reveal>The Philosophy of Origin</h1>
+    <p class="page-hero__lede" data-reveal>Sylvan Synergy began with a simple observation: the spaces that make us feel most human are rarely the most impressive. They are the ones that let us breathe.</p>
+  </div>
+</header>
+
+<figure class="about-band">
+  <img src="{{ '/assets/img/about-studio.jpg' | relative_url }}" alt="A glass-roofed garden room with a living wall and layered greenery." width="1600" height="1067" loading="lazy">
+  <figcaption class="container">The studio garden, Lisbon.</figcaption>
+</figure>
+
+<section class="about-manifesto" aria-labelledby="manifesto-title">
+  <div class="container about-manifesto__inner">
+    <p class="eyebrow" data-reveal>Our manifesto</p>
+    <h2 class="about-manifesto__text" id="manifesto-title" data-reveal>We believe architecture is a form of care. Not a statement, but a shelter. Not a spectacle, but a habitat.</h2>
+    <p class="about-manifesto__body" data-reveal>Our work begins with listening — to the site, the climate, the body — and ends only when a space feels inevitable. This requires patience, close collaboration and a willingness to let the place lead.</p>
+    <p class="about-manifesto__signature" data-reveal>Elena Voss &amp; Mateo Ríos<br><span>Founding Partners</span></p>
+  </div>
+</section>
+
+<section class="story section section--ruled" aria-labelledby="story-title">
+  <div class="container story__grid">
+    <div class="story__text" data-reveal>
+      <p class="eyebrow">Origin</p>
+      <h2 id="story-title">A studio grown from a workshop</h2>
+      <p>Sylvan Synergy began in 2009 in a former carpentry workshop in Lisbon, with two architects, a landscape designer and a borrowed kettle. Elena Voss and Mateo Ríos had spent a decade on large cultural projects and wanted to work closer to the ground: houses, gardens and small public rooms.</p>
+      <p>The first commission was a courtyard renovation for a family who wanted their fig tree to survive a new extension. It did. The studio has been designing around living things ever since.</p>
+      <p>Today we are twenty-eight people across Lisbon, Kyoto and Vancouver. We still begin every project the same way: a long walk, a notebook, and a conversation about how the client wants to feel at seven in the morning.</p>
+    </div>
+    <figure class="story__media" data-reveal>
+      <img src="{{ '/assets/img/texture-leaf.jpg' | relative_url }}" alt="A palm leaf in soft light against a pale wall." width="1200" height="800" loading="lazy">
+      <figcaption>Material study no. 14 — palm, lime plaster, afternoon light.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="about-principles section section--ruled" aria-labelledby="principles-title">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="eyebrow">Method</p>
+        <h2 id="principles-title">Four ways of working</h2>
+      </div>
+      <p class="section-note">Principles we return to when a drawing gets too clever.</p>
+    </div>
+
+    <ol class="principle-list">
+      <li data-reveal>
+        <span class="principle-list__num">01</span>
+        <div>
+          <h3>Listen before drawing</h3>
+          <p>Every project begins with time on site: light studies, soil tests, conversations, a walk through the neighbourhood at different hours. We do not sketch until we can describe how the place feels.</p>
+        </div>
+      </li>
+      <li data-reveal>
+        <span class="principle-list__num">02</span>
+        <div>
+          <h3>Build with what is near</h3>
+          <p>We source materials and makers within reach of the site wherever possible. Local stone, local timber, local hands. It keeps the work grounded and the carbon low.</p>
+        </div>
+      </li>
+      <li data-reveal>
+        <span class="principle-list__num">03</span>
+        <div>
+          <h3>Design for the body</h3>
+          <p>Comfort is physical. We test ceiling heights, stair depths, door widths and the temperature of a handrail. A beautiful room that is uncomfortable is a drawing, not a building.</p>
+        </div>
+      </li>
+      <li data-reveal>
+        <span class="principle-list__num">04</span>
+        <div>
+          <h3>Leave room for time</h3>
+          <p>We design for the first scratch and the fiftieth season. Planting, patina and repair are part of the plan, not an afterthought.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="team section section--ruled" aria-labelledby="team-title">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="eyebrow">The collective</p>
+        <h2 id="team-title">People who tend the work</h2>
+      </div>
+      <p class="section-note">Twenty-eight architects, designers, makers and growers across three studios.</p>
+    </div>
+
+    <div class="team-mosaic">
+      {% for member in site.data.team %}
+      <article class="team-member" data-reveal style="--delay: {{ forloop.index0 | times: 0.08 }}s">
+        <figure class="team-member__media">
+          <img src="{{ member.image | relative_url }}" alt="{{ member.alt }}" width="900" height="600" loading="lazy">
+        </figure>
+        <div class="team-member__body">
+          <h3>{{ member.name }}</h3>
+          <p class="team-member__role">{{ member.role }}</p>
+          <p class="team-member__bio">{{ member.bio }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="process section section--ruled" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="eyebrow">How we work</p>
+        <h2 id="process-title">Slow architecture, in four movements</h2>
+      </div>
+    </div>
+
+    <ol class="process-grid">
+      <li data-reveal>
+        <span>01</span>
+        <h3>Listen</h3>
+        <p>Two to four weeks. Site walks, light and wind studies, and conversations with everyone who will use the space.</p>
+      </li>
+      <li data-reveal>
+        <span>02</span>
+        <h3>Trace</h3>
+        <p>Four to eight weeks. Sketches, physical models, material samples and a first planting palette.</p>
+      </li>
+      <li data-reveal>
+        <span>03</span>
+        <h3>Build</h3>
+        <p>Eight to eighteen months. Collaboration with local makers, regular site visits and one point of contact throughout.</p>
+      </li>
+      <li data-reveal>
+        <span>04</span>
+        <h3>Tend</h3>
+        <p>Ongoing. Seasonal reviews, care guides and small adjustments as the building settles into its place.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="testimonial" aria-labelledby="testimonial-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="testimonial-title">Client words</h2>
+    <blockquote data-reveal>
+      <p>“They didn't decorate our house. They taught it how to breathe.”</p>
+      <cite>Inês &amp; Tomás Ferreira <span>Fern House, Lisbon</span></cite>
+    </blockquote>
+  </div>
+</section>
+
+{% include cta.html %}

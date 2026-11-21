@@ -1,0 +1,23 @@
+- name: Elena Voss
+  role: Founding Partner, Architecture
+  image: /assets/img/team-elena.jpg
+  alt: Elena Voss reviewing architectural drawings in the studio.
+  bio: Elena trained in Porto and Kyoto. She leads the studio's residential work and its long conversation with wood.
+
+- name: Mateo Ríos
+  role: Founding Partner, Landscape
+  image: /assets/img/team-mateo.jpg
+  alt: Mateo Ríos looking out from a city terrace in black and white.
+  bio: Mateo is a landscape architect and amateur mycologist. He designs the living systems that hold our buildings.
+
+- name: Aiko Tanaka
+  role: Director of Interiors
+  image: /assets/img/team-aiko.jpg
+  alt: Aiko Tanaka working on floor plans at a studio desk.
+  bio: "Aiko shapes the tactile life of our projects: the grain, the weight and the temperature of a room."
+
+- name: Idris Okafor
+  role: Head of Material Research
+  image: /assets/img/team-idris.jpg
+  alt: Idris Okafor studying a miniature architectural model.
+  bio: Idris runs our material library and our stubborn belief that almost everything can be repaired.

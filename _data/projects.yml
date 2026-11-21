@@ -1,0 +1,39 @@
+- name: Fern House
+  location: Lisbon, Portugal
+  year: "2024"
+  type: Residence
+  image: /assets/img/project-fern-house.jpg
+  alt: A glass-roofed indoor garden with layered greenery and pale stone floors.
+  note: A courtyard home where the garden enters before the door does.
+
+- name: Stone &amp; Light Pavilion
+  location: Kyoto, Japan
+  year: "2023"
+  type: Cultural
+  image: /assets/img/project-stone-pavilion.jpg
+  alt: A quiet concrete room with a tall window casting long shadows across the floor.
+  note: A meditation pavilion carved around a single shaft of daylight.
+
+- name: The Canopy Loft
+  location: Vancouver, Canada
+  year: "2025"
+  type: Interior
+  image: /assets/img/project-canopy-loft.jpg
+  alt: A double-height atrium with a round pendant light and planting along the upper gallery.
+  note: An urban apartment reimagined as a clearing in the canopy.
+
+- name: Moss Courtyard
+  location: Copenhagen, Denmark
+  year: "2022"
+  type: Workplace
+  image: /assets/img/project-moss-courtyard.jpg
+  alt: A multi-level interior with a living green wall and natural timber surfaces.
+  note: A working garden for a studio that thinks in seasons.
+
+- name: Terrace of Mists
+  location: Madeira, Portugal
+  year: "2021"
+  type: Landscape
+  image: /assets/img/project-mist-terrace.jpg
+  alt: A lush, fern-filled greenhouse interior with light filtering through a glass roof.
+  note: Terraced gardens that gather fog and return it to the soil.

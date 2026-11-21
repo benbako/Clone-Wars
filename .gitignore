@@ -1,0 +1,8 @@
+# Jekyll build output and caches
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Editor and OS files
+.DS_Store

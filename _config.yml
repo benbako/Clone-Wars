@@ -5,3 +5,12 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+
+# Sylvan Synergy site
+title: Sylvan Synergy
+tagline: Architecture & interiors for biophilic living
+description: >-
+  Sylvan Synergy is a collective of architects, interior designers and landscape
+  thinkers shaping biophilic spaces where nature is not a view, but a collaborator.
+lang: en
+permalink: /journal/:title/

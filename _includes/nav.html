@@ -1,0 +1,26 @@
+<header class="site-nav" data-nav>
+  <div class="site-nav__inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Sylvan Synergy — home">
+      <svg class="wordmark__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M16 25V9M16 15c0-4 3-7 7-7 0 4-3 7-7 7Zm0 4c0-3-2.5-5.5-5.5-5.5 0 3 2.5 5.5 5.5 5.5Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span class="wordmark__text">Sylvan <em>Synergy</em></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+      <span class="nav-toggle__label" data-nav-label>Menu</span>
+      <span class="nav-toggle__lines" aria-hidden="true"><span></span><span></span></span>
+    </button>
+
+    <nav id="site-menu" class="site-menu" aria-label="Primary">
+      <ul class="site-menu__list">
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
+        <li><a href="{{ '/journal/' | relative_url }}"{% if page.url contains '/journal' %} aria-current="page"{% endif %}>Journal</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}"{% if page.url == '/contact/' %} aria-current="page"{% endif %}>Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="{{ '/contact/' | relative_url }}">Begin a conversation <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>

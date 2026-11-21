@@ -1,0 +1,52 @@
+---
+layout: default
+title: The Journal of Living
+permalink: /journal/
+description: Essays on light, material, water and the quiet intelligence of plants, written from inside the Sylvan Synergy practice.
+body_class: journal
+---
+
+<header class="page-hero">
+  <div class="container page-hero__grid">
+    <p class="eyebrow page-hero__eyebrow" data-reveal>The journal</p>
+    <h1 data-reveal>The Journal of Living</h1>
+    <p class="page-hero__lede" data-reveal>Essays on light, material, water and the quiet intelligence of plants — written from inside the practice.</p>
+  </div>
+</header>
+
+<section class="journal-index section" aria-labelledby="latest-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="latest-title">Latest essays</h2>
+
+    {% assign featured = site.posts.first %}
+    <a class="featured-essay" href="{{ featured.url | relative_url }}" data-reveal>
+      <figure class="featured-essay__media">
+        <img src="{{ featured.image | relative_url }}" alt="{{ featured.image_alt }}" width="1400" height="2100" loading="eager">
+      </figure>
+      <div class="featured-essay__body">
+        <p class="eyebrow">{{ featured.category }} · Featured</p>
+        <h2>{{ featured.title }}</h2>
+        <p class="featured-essay__excerpt">{{ featured.description }}</p>
+        <p class="featured-essay__meta">{{ featured.date | date: "%d %B %Y" }} · {{ featured.reading_time }} min read</p>
+        <span class="text-link">Read the essay <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+
+    <h2 class="journal-index__heading">All essays</h2>
+    <ol class="essay-index">
+      {% for post in site.posts offset:1 %}
+      <li>
+        <a class="essay-row essay-row--index" href="{{ post.url | relative_url }}" data-cursor-image="{{ post.image | relative_url }}" data-reveal>
+          {% assign num = forloop.index | plus: 1 %}
+          <span class="essay-row__num">{% if num < 10 %}0{{ num }}{% else %}{{ num }}{% endif %}</span>
+          <span class="essay-row__title">{{ post.title }}</span>
+          <span class="essay-row__meta">{{ post.category }} · {{ post.date | date: "%b %Y" }} · {{ post.reading_time }} min</span>
+          <span class="essay-row__arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{% include cta.html %}
