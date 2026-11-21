@@ -1190,6 +1190,18 @@
   color: var(--error);
 }
 
+.form-status--info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+  color: var(--muted);
+}
+
+.form-status--info .text-link {
+  min-height: 0;
+}
+
 .contact__aside {
   display: grid;
   gap: 2.5rem;

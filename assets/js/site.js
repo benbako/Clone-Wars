@@ -266,7 +266,10 @@
     };
 
     var showSuccess = function () {
-      if (status) status.textContent = '';
+      if (status) {
+        status.textContent = '';
+        status.classList.remove('form-status--info');
+      }
       document.body.classList.add('contact-complete');
       if (panel) {
         panel.classList.add('is-active');
@@ -294,10 +297,38 @@
           if (!response.ok) throw new Error('Request failed');
           showSuccess();
         }).catch(function () {
-          if (status) status.textContent = 'Something went wrong. Please email studio@sylvansynergy.com instead.';
+          if (status) {
+            status.classList.remove('form-status--info');
+            status.textContent = 'Something went wrong. Please email studio@sylvansynergy.com instead.';
+          }
         });
       } else {
-        showSuccess();
+        // No form endpoint is configured (static site): hand the note to the
+        // visitor's email client instead of claiming a delivery that never happened.
+        var projectField = form.querySelector('#project');
+        var locationField = form.querySelector('#location');
+        var mailto = 'mailto:studio@sylvansynergy.com'
+          + '?subject=' + encodeURIComponent('Inquiry from ' + fields.name.value.trim())
+          + '&body=' + encodeURIComponent(
+            'Name: ' + fields.name.value.trim() + '\n'
+            + 'Email: ' + fields.email.value.trim() + '\n'
+            + 'Project: ' + ((projectField && projectField.value) || '—') + '\n'
+            + 'Location: ' + ((locationField && locationField.value.trim()) || '—') + '\n\n'
+            + fields.message.value.trim()
+          );
+
+        if (status) {
+          status.textContent = '';
+          status.classList.add('form-status--info');
+          var mailLink = document.createElement('a');
+          mailLink.className = 'text-link';
+          mailLink.href = mailto;
+          mailLink.textContent = 'Open this note in your email app';
+          status.appendChild(document.createTextNode(
+            'Your note is ready to send to studio@sylvansynergy.com. '
+          ));
+          status.appendChild(mailLink);
+        }
       }
     });
 
@@ -305,6 +336,15 @@
       fields[key].addEventListener('input', function () {
         setError(fields[key], '');
       });
+    });
+
+    // The email hand-off carries a snapshot of the note, so drop it as soon as
+    // the visitor changes anything, rather than offering a stale draft.
+    form.addEventListener('input', function () {
+      if (status && status.classList.contains('form-status--info')) {
+        status.textContent = '';
+        status.classList.remove('form-status--info');
+      }
     });
 
     var resetButton = document.querySelector('[data-contact-reset]');
@@ -316,6 +356,10 @@
           panel.setAttribute('aria-hidden', 'true');
         }
         form.reset();
+        if (status) {
+          status.textContent = '';
+          status.classList.remove('form-status--info');
+        }
         if (fields.name) fields.name.focus();
       });
     }
